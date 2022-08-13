@@ -1,6 +1,7 @@
 /**
  * @type { import("snowpack").SnowpackUserConfig }
  */
+
 module.exports = {
   buildOptions: {
     out: './theme/keywind/login/resources',
@@ -9,7 +10,10 @@ module.exports = {
     tailwindConfig: './tailwind.config.js',
   },
   mount: {
-    src: '/dist',
+    'src': '/dist',
+    'static': { url: '/static', static: true },
+    'node_modules/@fontsource/source-sans-pro/': '/fonts/source-sans-pro',
+    'node_modules/@fontsource/signika-negative/': '/fonts/signika-negative',
   },
   optimize: {
     bundle: true,

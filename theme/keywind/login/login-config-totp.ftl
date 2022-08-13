@@ -4,7 +4,7 @@
 <#import "components/input/primary.ftl" as inputPrimary>
 <#import "components/label/totp.ftl" as labelTotp>
 <#import "components/label/userdevice.ftl" as labelUserDevice>
-<#import "components/link/primary.ftl" as linkPrimary>
+<#import "components/link/accent.ftl" as linkAccent>
 
 <@layout.registrationLayout
   displayMessage=!messagesPerField.existsError("totp", "userLabel")
@@ -30,9 +30,9 @@
           <p class="font-bold py-2 text-xl">${totp.totpSecretEncoded}</p>
         </li>
         <li>
-          <@linkPrimary.kw href=totp.qrUrl>
+          <@linkAccent.kw href=totp.qrUrl>
             ${msg("loginTotpScanBarcode")}
-          </@linkPrimary.kw>
+          </@linkAccent.kw>
         </li>
         <li>
           <p>${msg("loginTotpManualStep3")}</p>
@@ -53,27 +53,27 @@
           <img
             alt="Figure: Barcode"
             class="mx-auto"
-            src="data:image/png;base64, ${totp.totpSecretQrCode}"
-          >
-          <@linkPrimary.kw href=totp.manualUrl>
+            src="data:image/png;base64, ${totp.totpSecretQrCode}">
+          <@linkAccent.kw href=totp.manualUrl>
             ${msg("loginTotpUnableToScan")}
-          </@linkPrimary.kw>
+          </@linkAccent.kw>
         </li>
       </#if>
       <li>${msg("loginTotpStep3")}</li>
       <li>${msg("loginTotpStep3DeviceName")}</li>
     </ol>
+    <div class="separate"></div>
     <form action="${url.loginAction}" class="m-0 space-y-4" method="post">
       <div>
+        <span><@labelTotp.kw /></span>
         <@inputPrimary.kw
           autocomplete="off"
           autofocus=true
           invalid=["totp"]
           name="totp"
           required=false
-          type="text"
-        >
-          <@labelTotp.kw />
+          type="text">
+          ${msg("placeholderOTP")}
         </@inputPrimary.kw>
         <input name="totpSecret" type="hidden" value="${totp.totpSecret}">
         <#if mode??>
@@ -81,18 +81,18 @@
         </#if>
       </div>
       <div>
+        <span><@labelUserDevice.kw /></span>
         <@inputPrimary.kw
           autocomplete="off"
           invalid=["userLabel"]
           name="userLabel"
           required=false
-          type="text"
-        >
-          <@labelUserDevice.kw />
+          type="text">
+          ${msg("placeholderOTPDeviceName")}
         </@inputPrimary.kw>
       </div>
       <#if isAppInitiatedAction??>
-        <div class="flex flex-col pt-4 space-y-2">
+        <div class="flex flex-col pt-4 space-y-4">
           <@buttonPrimary.kw type="submit">
             ${msg("doSubmit")}
           </@buttonPrimary.kw>

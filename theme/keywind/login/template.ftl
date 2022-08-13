@@ -12,6 +12,7 @@
 <#import "components/layout/title.ftl" as title>
 <#import "components/layout/subtitle.ftl" as subtitle>
 <#import "components/layout/username.ftl" as username>
+<#import "components/link/secondary.ftl" as linkSecondary>
 
 <#macro
   registrationLayout
@@ -37,6 +38,7 @@
               <@username.kw />
             </#if>
           </@cardHeader.kw>
+          <div class="separate"></div>
           <@cardMain.kw>
             <#if displayMessage && message?has_content && (message.type != "warning" || !isAppInitiatedAction??)>
               <@alerts.kw />
@@ -60,6 +62,9 @@
           <#if realm.internationalizationEnabled && locale.supported?size gt 1>
             <@locales.kw />
           </#if>
+          <@linkSecondary.kw href="${properties.accountManagementUrl}">
+            <span class="text-sm">${msg("accountManagement")} »</span>
+          </@linkSecondary.kw>
         </@nav.kw>
       </@container.kw>
     </body>

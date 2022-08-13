@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /**
  * @type { import('@types/tailwindcss/tailwind-config').TailwindConfig }
@@ -12,9 +13,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.blue,
-        secondary: colors.gray,
-      },
+        primary: colors.emerald,
+        secondary: colors.zinc,
+        accent: colors.pink
+      }
     },
+    fontFamily: {
+      sans: ['"Signika Negative"', '"Source Sans Pro"', ...defaultTheme.fontFamily.sans]
+    }
   },
 };

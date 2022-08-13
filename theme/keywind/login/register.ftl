@@ -13,73 +13,69 @@
   <#elseif section="form">
     <form action="${url.registrationAction}" class="m-0 space-y-4" method="post">
       <div>
+      <span>${msg("firstName")}</span>
         <@inputPrimary.kw
           autocomplete="given-name"
           autofocus=true
           invalid=["firstName"]
           name="firstName"
           type="text"
-          value=(register.formData.firstName)!''
-        >
-          ${msg("firstName")}
+          value=(register.formData.firstName)!''>
+          ${msg("placeholderFirstname")}
         </@inputPrimary.kw>
       </div>
       <div>
+        <span>${msg("lastName")}</span>
         <@inputPrimary.kw
           autocomplete="family-name"
           invalid=["lastName"]
           name="lastName"
           type="text"
-          value=(register.formData.lastName)!''
-        >
-          ${msg("lastName")}
+          value=(register.formData.lastName)!''>
+          ${msg("placeholderLastname")}
         </@inputPrimary.kw>
       </div>
       <div>
+        <span>${msg("email")}</span>
         <@inputPrimary.kw
           autocomplete="email"
           invalid=["email"]
           name="email"
           type="email"
-          value=(register.formData.email)!''
-        >
-          ${msg("email")}
+          value=(register.formData.email)!''>
+          ${msg("placeholderEmail")}
         </@inputPrimary.kw>
       </div>
       <#if !realm.registrationEmailAsUsername>
         <div>
+          <span>${msg("username")}</span>
           <@inputPrimary.kw
             autocomplete="username"
             invalid=["username"]
             name="username"
             type="text"
-            value=(register.formData.username)!''
-          >
-            ${msg("username")}
+            value=(register.formData.username)!''>
+            ${msg("placeholderUsername")}
           </@inputPrimary.kw>
         </div>
       </#if>
       <#if passwordRequired??>
         <div>
+          <span>${msg("password")}</span>
           <@inputPrimary.kw
             autocomplete="new-password"
             invalid=["password", "password-confirm"]
             message=false
             name="password"
-            type="password"
-          >
-            ${msg("password")}
-          </@inputPrimary.kw>
+            type="password" />
         </div>
         <div>
+          <span>${msg("passwordConfirm")}</span>
           <@inputPrimary.kw
             autocomplete="new-password"
             invalid=["password-confirm"]
             name="password-confirm"
-            type="password"
-          >
-            ${msg("passwordConfirm")}
-          </@inputPrimary.kw>
+            type="password" />
         </div>
       </#if>
       <#if recaptchaRequired??>
@@ -87,7 +83,7 @@
           <div class="g-recaptcha" data-sitekey="${recaptchaSiteKey}" data-size="compact"></div>
         </div>
       </#if>
-      <div>
+      <div class="pt-4">
         <@buttonPrimary.kw type="submit">
           ${msg("doRegister")}
         </@buttonPrimary.kw>

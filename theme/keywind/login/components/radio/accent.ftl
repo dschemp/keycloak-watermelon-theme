@@ -2,7 +2,7 @@
   <div>
     <input
       <#if checked>checked</#if>
-      class="border-gray-300 text-primary-600 focus:ring-primary-200 focus:ring-opacity-50"
+      class="border-gray-300 text-accent-600 focus:ring-accent-200 focus:ring-opacity-50"
       id="${id}"
       type="radio"
       <#list rest as attrName, attrValue>

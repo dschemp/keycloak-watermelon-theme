@@ -15,25 +15,31 @@
   <#elseif section="form">
     <form action="${url.loginAction}" class="m-0 space-y-4" method="post">
       <div>
+        <span><@labelUsername.kw /></span>
         <@inputPrimary.kw
           autocomplete=realm.loginWithEmailAllowed?string("email", "username")
           autofocus=true
           invalid=["username"]
           name="username"
           type="text"
-          value=(auth?has_content && auth.showUsername())?then(auth.attemptedUsername, '')
-        >
-          <@labelUsername.kw />
+          value=(auth?has_content && auth.showUsername())?then(auth.attemptedUsername, '')>
+          <#if !realm.loginWithEmailAllowed>
+            ${msg("placeholderUsername")}
+          <#elseif !realm.registrationEmailAsUsername>
+            ${msg("placeholderEmailOrUsername")}
+          <#else>
+            ${msg("placeholderEmail")}
+          </#if>
         </@inputPrimary.kw>
       </div>
-      <div>
+      <div class="pt-4">
         <@buttonPrimary.kw type="submit">
           ${msg("doSubmit")}
         </@buttonPrimary.kw>
       </div>
     </form>
   <#elseif section="info">
-    ${msg("emailInstruction")}
+    <span class="text-sm">${msg("emailInstruction")}</span>
   <#elseif section="nav">
     <@linkSecondary.kw href=url.loginUrl>
       <span class="text-sm">${kcSanitize(msg("backToLogin"))?no_esc}</span>

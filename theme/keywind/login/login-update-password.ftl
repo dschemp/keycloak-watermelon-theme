@@ -19,31 +19,27 @@
       >
       <input autocomplete="current-password" name="password" type="hidden">
       <div>
+        <span>${msg("passwordNew")}</span>
         <@inputPrimary.kw
           autocomplete="new-password"
           autofocus=true
           invalid=["password", "password-confirm"]
           message=false
           name="password-new"
-          type="password"
-        >
-          ${msg("passwordNew")}
-        </@inputPrimary.kw>
+          type="password" />
       </div>
       <div>
+        <span>${msg("passwordConfirm")}</span>
         <@inputPrimary.kw
           autocomplete="new-password"
           invalid=["password-confirm"]
           name="password-confirm"
-          type="password"
-        >
-          ${msg("passwordConfirm")}
-        </@inputPrimary.kw>
+          type="password" />
       </div>
 
       <#-- TODO isAppInitiatedAction -->
 
-      <div>
+      <div class="pt-4">
         <@buttonPrimary.kw type="submit">
           ${msg("doSubmit")}
         </@buttonPrimary.kw>

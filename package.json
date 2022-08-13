@@ -5,6 +5,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@fontsource/signika-negative": "^4.5.10",
+    "@fontsource/source-sans-pro": "^4.5.11",
     "alpinejs": "^3.9.5"
   },
   "devDependencies": {

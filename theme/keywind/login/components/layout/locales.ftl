@@ -10,7 +10,7 @@
       </div>
     </@linkSecondary.kw>
     <div
-      class="absolute bg-white bottom-0 -left-4 max-h-80 mb-6 overflow-y-scroll rounded-lg shadow-lg"
+      class="absolute bg-white border-2 border-secondary-300 divide-y divide-secondary-200 bottom-0 -left-2 max-h-80 mb-6 rounded-lg shadow-lg"
       x-show="open"
       @click.away="open = false"
     >

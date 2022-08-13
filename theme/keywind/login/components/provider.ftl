@@ -2,7 +2,7 @@
 
 <#macro kw>
   <div class="separate pt-4">${msg("identity-provider-login-label")}</div>
-  <div class="flex <#if social.providers?size gt 3>justify-between<#else>justify-around</#if>">
+  <div class="flex w-full <#if social.providers?size gt 3>justify-between<#else>justify-around</#if>">
     <#list social.providers as provider>
       <a
         class="text-5xl"

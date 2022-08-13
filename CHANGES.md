@@ -1,0 +1,10 @@
+- added secondary and accent color, different primary color
+- added customizable page footer
+- added explicit text input labels (mostly)
+- changed text input hints
+- changed text input changes color to accent when error occured
+- added link to Account Management added
+- added "native" support for site logo
+- more mobile friendly
+- added Keycloak test environment with docker
+- changed / added different base font (Signika Negative and Source Sans Pro)
