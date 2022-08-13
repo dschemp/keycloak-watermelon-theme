@@ -4,7 +4,7 @@
 
 module.exports = {
   buildOptions: {
-    out: './theme/keywind/login/resources',
+    out: './theme/watermelon/login/resources',
   },
   devOptions: {
     tailwindConfig: './tailwind.config.js',

@@ -23,7 +23,7 @@ services:
       - KC_DB_PASSWORD=dah2at2yeithuuNgoo7lie9Afee8bo6r
       - KC_DB=postgres
     volumes:
-      - ./theme/keywind:/opt/keycloak/themes/keywind-dev:ro
+      - ./theme/:/opt/keycloak/themes/:ro
     networks:
       - default
       - keycloak
