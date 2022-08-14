@@ -1,8 +1,4 @@
 <#import "template.ftl" as layout>
-<#import "components/button/primary.ftl" as buttonPrimary>
-<#import "components/input/primary.ftl" as inputPrimary>
-<#import "components/label/username.ftl" as labelUsername>
-<#import "components/link/secondary.ftl" as linkSecondary>
 <#import "components/link/buttonPrimary.ftl" as buttonLinkPrimary>
 <#import "components/link/buttonSecondary.ftl" as buttonLinkSecondary>
 

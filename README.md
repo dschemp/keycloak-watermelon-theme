@@ -16,6 +16,7 @@ It is a component-based Keycloak Login Theme built with [Tailwind CSS](https://g
 - Login Reset Password
 - Login Update Password
 - Login Update Profile
+- Login Expired
 - Register
 - Error
 
