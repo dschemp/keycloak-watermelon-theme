@@ -15,7 +15,8 @@ module.exports = {
       colors: {
         primary: colors.emerald,
         secondary: colors.zinc,
-        accent: colors.pink
+        accent: colors.pink,
+        danger: colors.red,
       },
       listStyleType: {
         square: 'square',

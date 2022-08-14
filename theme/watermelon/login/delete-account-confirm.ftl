@@ -1,5 +1,5 @@
 <#import "template.ftl" as layout>
-<#import "components/button/primary.ftl" as buttonPrimary>
+<#import "components/button/danger.ftl" as buttonPrimary>
 <#import "components/button/secondary.ftl" as buttonSecondary>
 <#import "components/layout/alerts.ftl" as alerts>
 
