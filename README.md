@@ -21,6 +21,7 @@ It is a component-based Keycloak Login Theme built with [Tailwind CSS](https://g
 - Register
 - Error
 - Account Deletion Confirmation
+- Info
 
 ## Build
 

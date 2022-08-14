@@ -10,13 +10,12 @@
     <div class="bg-red-100 text-red-600 p-4 rounded-lg" role="alert">
       <span>${msg("irreversibleAction")}</span>
     </div>
-
     <div class="space-y-2">
-    <span>${msg("deletingImplies")}</span>
-    <ul class="list-square pl-6 py-2 space-y-2">
-      <li>${msg("loggingOutImmediately")}</li>
-      <li>${msg("errasingData")}</li>
-    </ul>
+      <span>${msg("deletingImplies")}</span>
+      <ul class="list-square pl-6 py-2 space-y-2">
+        <li>${msg("loggingOutImmediately")}</li>
+        <li>${msg("errasingData")}</li>
+      </ul>
     </div>
   <#elseif section="info">
     <form class="m-0 space-y-4" action="${url.loginAction}" method="POST">
