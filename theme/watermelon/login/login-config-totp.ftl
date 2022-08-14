@@ -18,7 +18,7 @@
     <ol class="list-decimal pl-4 space-y-2">
       <li>
         <p>${msg("loginTotpStep1")}</p>
-        <ul class="list-disc pl-6 py-2 space-y-2">
+        <ul class="list-square pl-6 py-2 space-y-2">
           <#list totp.policy.supportedApplications as app>
             <li>${app}</li>
           </#list>
@@ -36,7 +36,7 @@
         </li>
         <li>
           <p>${msg("loginTotpManualStep3")}</p>
-          <ul class="list-disc pl-6 py-2 space-y-2">
+          <ul class="list-square pl-6 py-2 space-y-2">
             <li>${msg("loginTotpType")}: ${msg("loginTotp." + totp.policy.type)}</li>
             <li>${msg("loginTotpAlgorithm")}: ${totp.policy.getAlgorithmKey()}</li>
             <li>${msg("loginTotpDigits")}: ${totp.policy.digits}</li>
@@ -87,7 +87,7 @@
           autocomplete="off"
           invalid=["userLabel"]
           name="userLabel"
-          required=false
+          required=true
           type="text">
           ${msg("placeholderOTPDeviceName")}
         </@inputPrimary.kw>

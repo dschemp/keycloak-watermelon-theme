@@ -1,5 +1,5 @@
 <#macro kw>
   <#compress>
-    ${msg("loginTotpDeviceName")} <#if totp.otpCredentials?size gte 1>*</#if>
+    ${msg("loginTotpDeviceName")} *
   </#compress>
 </#macro>

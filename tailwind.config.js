@@ -16,11 +16,14 @@ module.exports = {
         primary: colors.emerald,
         secondary: colors.zinc,
         accent: colors.pink
+      },
+      listStyleType: {
+        square: 'square',
       }
     },
     fontFamily: {
       'sans': ['"Signika Negative"', '"Source Sans Pro"', ...defaultTheme.fontFamily.sans],
       'mono': ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],
-    }
+    },
   },
 };
