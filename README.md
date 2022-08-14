@@ -20,6 +20,7 @@ It is a component-based Keycloak Login Theme built with [Tailwind CSS](https://g
 - Terms and Conditions
 - Register
 - Error
+- Account Deletion Confirmation
 
 ## Build
 
