@@ -5,7 +5,7 @@
         <img class="max-h-[8rem]" src="${url.resourcesPath}/${properties.logoFileName}">
       </div>
     <#else>
-      <div class="font-bold text-center text-2xl">
+      <div class="font-bold text-center text-2xl select-none">
         ${kcSanitize(msg("loginTitleHtml", (realm.displayNameHtml!"")))?no_esc}
       </div>
     </#if>
