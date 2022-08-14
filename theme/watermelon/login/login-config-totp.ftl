@@ -2,8 +2,6 @@
 <#import "components/button/primary.ftl" as buttonPrimary>
 <#import "components/button/secondary.ftl" as buttonSecondary>
 <#import "components/input/primary.ftl" as inputPrimary>
-<#import "components/label/totp.ftl" as labelTotp>
-<#import "components/label/userdevice.ftl" as labelUserDevice>
 <#import "components/link/accent.ftl" as linkAccent>
 
 <@layout.registrationLayout
@@ -65,14 +63,15 @@
     <div class="separate"></div>
     <form action="${url.loginAction}" class="m-0 space-y-4" method="post">
       <div>
-        <span><@labelTotp.kw /></span>
+        <span>${msg("authenticatorCode")}</span>
         <@inputPrimary.kw
           autocomplete="off"
           autofocus=true
           invalid=["totp"]
           monospace=true
+          minlength="6"
+          maxlength="6"
           name="totp"
-          required=false
           type="text">
           ${msg("placeholderOTP")}
         </@inputPrimary.kw>
@@ -82,12 +81,11 @@
         </#if>
       </div>
       <div>
-        <span><@labelUserDevice.kw /></span>
+        <span>${msg("loginTotpDeviceName")}</span>
         <@inputPrimary.kw
           autocomplete="off"
           invalid=["userLabel"]
           name="userLabel"
-          required=true
           type="text">
           ${msg("placeholderOTPDeviceName")}
         </@inputPrimary.kw>

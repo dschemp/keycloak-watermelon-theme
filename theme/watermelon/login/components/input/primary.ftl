@@ -1,4 +1,4 @@
-<#macro kw invalid name autofocus=false disabled=false monospace=false message=true required=true rest...>
+<#macro kw invalid name autofocus=false disabled=false monospace=false message=true required=false rest...>
   <label class="sr-only" for="${name}">
     <#nested>
   </label>

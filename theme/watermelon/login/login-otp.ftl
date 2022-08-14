@@ -1,7 +1,6 @@
 <#import "template.ftl" as layout>
 <#import "components/button/primary.ftl" as buttonPrimary>
 <#import "components/input/primary.ftl" as inputPrimary>
-<#import "components/label/totp.ftl" as labelTotp>
 <#import "components/link/buttonSecondary.ftl" as buttonLinkSecondary>
 <#import "components/radio/accent.ftl" as radioAccent>
 
@@ -32,12 +31,14 @@
         </div>
       </#if>
       <div>
-        <span><@labelTotp.kw /></span>
+        <span>${msg("authenticatorCode")}</span>
         <@inputPrimary.kw
           autocomplete="off"
           autofocus=true
           invalid=["totp"]
           monospace=true
+          minlength="6"
+          maxlength="6"
           name="otp"
           type="text">
           ${msg("placeholderOTP")}
