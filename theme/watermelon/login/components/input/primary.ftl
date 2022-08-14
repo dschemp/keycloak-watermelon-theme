@@ -7,7 +7,7 @@
     <#if disabled>disabled</#if>
     <#if required>required</#if>
     aria-invalid="${messagesPerField.existsError(invalid)?c}"
-    class="block border-gray-300 sm:text-sm mt-1 rounded-md w-full focus:ring focus:ring-opacity-50
+    class="block border-gray-300 mt-1 rounded-md w-full focus:ring focus:ring-opacity-50
     <#if monospace>font-mono</#if>
     <#if message && messagesPerField.existsError(invalid)>
       focus:ring-accent-200 border-accent-300
