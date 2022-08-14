@@ -28,4 +28,11 @@
       <script defer src="${url.resourcesPath}/${script}" type="text/javascript"></script>
     </#list>
   </#if>
+
+  <link href="${url.resourcesPath}/fonts/source-sans-pro/index.css" rel="stylesheet" />
+  <link href="${url.resourcesPath}/fonts/source-sans-pro/700.css" rel="stylesheet" />
+  <link href="${url.resourcesPath}/fonts/signika-negative/index.css" rel="stylesheet" />
+  <link href="${url.resourcesPath}/fonts/signika-negative/700.css" rel="stylesheet" />
+  <link href="${url.resourcesPath}/fonts/jetbrains-mono/index.css" rel="stylesheet" />
+  <link href="${url.resourcesPath}/fonts/jetbrains-mono/700.css" rel="stylesheet" />
 </#macro>

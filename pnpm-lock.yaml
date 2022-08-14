@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fontsource/jetbrains-mono': ^4.5.10
   '@fontsource/signika-negative': ^4.5.10
   '@fontsource/source-sans-pro': ^4.5.11
   '@snowpack/plugin-postcss': ^1.4.3
@@ -14,6 +15,7 @@ specifiers:
   tailwindcss: ^3.0.23
 
 dependencies:
+  '@fontsource/jetbrains-mono': 4.5.10
   '@fontsource/signika-negative': 4.5.10
   '@fontsource/source-sans-pro': 4.5.11
   alpinejs: 3.9.5
@@ -50,6 +52,10 @@ packages:
       chalk: 2.4.2
       js-tokens: 4.0.0
     dev: true
+
+  /@fontsource/jetbrains-mono/4.5.10:
+    resolution: {integrity: sha512-dylbkBmAWL0fkjDpDoDbQCwTQ/W3DzLtVXmwGyAyttfKliPGSP2WpAmmMFYp9NpqFMF7CLprFyzppe8u39Orkw==}
+    dev: false
 
   /@fontsource/signika-negative/4.5.10:
     resolution: {integrity: sha512-M2y3g4U2Xl3Jekj9NHGLmcWeJHRJF0kklZzBJ0n4xyAroeQVzVjQ+hSmZ2H8XAgyTl6+tQTjIjh898oNZoM+wg==}

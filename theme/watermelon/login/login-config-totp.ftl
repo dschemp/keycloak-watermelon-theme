@@ -27,7 +27,7 @@
       <#if mode?? && mode = "manual">
         <li>
           <p>${msg("loginTotpManualStep2")}</p>
-          <p class="font-bold py-2 text-xl">${totp.totpSecretEncoded}</p>
+          <p class="font-bold py-2 text-xl font-mono">${totp.totpSecretEncoded}</p>
         </li>
         <li>
           <@linkAccent.kw href=totp.qrUrl>
@@ -70,6 +70,7 @@
           autocomplete="off"
           autofocus=true
           invalid=["totp"]
+          monospace=true
           name="totp"
           required=false
           type="text">

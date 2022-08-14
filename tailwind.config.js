@@ -19,7 +19,8 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ['"Signika Negative"', '"Source Sans Pro"', ...defaultTheme.fontFamily.sans]
+      'sans': ['"Signika Negative"', '"Source Sans Pro"', ...defaultTheme.fontFamily.sans],
+      'mono': ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],
     }
   },
 };

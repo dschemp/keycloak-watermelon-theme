@@ -1,4 +1,4 @@
-<#macro kw invalid name autofocus=false disabled=false message=true required=true rest...>
+<#macro kw invalid name autofocus=false disabled=false monospace=false message=true required=true rest...>
   <label class="sr-only" for="${name}">
     <#nested>
   </label>
@@ -8,6 +8,7 @@
     <#if required>required</#if>
     aria-invalid="${messagesPerField.existsError(invalid)?c}"
     class="block border-gray-300 sm:text-sm mt-1 rounded-md w-full focus:ring focus:ring-opacity-50
+    <#if monospace>font-mono</#if>
     <#if message && messagesPerField.existsError(invalid)>
       focus:ring-accent-200 border-accent-300
     <#else>

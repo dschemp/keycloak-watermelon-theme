@@ -37,6 +37,7 @@
           autocomplete="off"
           autofocus=true
           invalid=["totp"]
+          monospace=true
           name="otp"
           type="text">
           ${msg("placeholderOTP")}

@@ -14,6 +14,7 @@ module.exports = {
     'static': { url: '/static', static: true },
     'node_modules/@fontsource/source-sans-pro/': '/fonts/source-sans-pro',
     'node_modules/@fontsource/signika-negative/': '/fonts/signika-negative',
+    'node_modules/@fontsource/jetbrains-mono/': '/fonts/jetbrains-mono',
   },
   optimize: {
     bundle: true,
