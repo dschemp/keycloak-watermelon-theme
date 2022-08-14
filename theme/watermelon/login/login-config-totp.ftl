@@ -63,6 +63,16 @@
     <div class="separate"></div>
     <form action="${url.loginAction}" class="m-0 space-y-4" method="post">
       <div>
+        <span>${msg("loginTotpDeviceName")}</span>
+        <@inputPrimary.kw
+          autocomplete="off"
+          invalid=["userLabel"]
+          name="userLabel"
+          type="text">
+          ${msg("placeholderOTPDeviceName")}
+        </@inputPrimary.kw>
+      </div>
+      <div>
         <span>${msg("authenticatorCode")}</span>
         <@inputPrimary.kw
           autocomplete="off"
@@ -79,16 +89,6 @@
         <#if mode??>
           <input name="mode" type="hidden" value="${mode}">
         </#if>
-      </div>
-      <div>
-        <span>${msg("loginTotpDeviceName")}</span>
-        <@inputPrimary.kw
-          autocomplete="off"
-          invalid=["userLabel"]
-          name="userLabel"
-          type="text">
-          ${msg("placeholderOTPDeviceName")}
-        </@inputPrimary.kw>
       </div>
       <#if isAppInitiatedAction??>
         <div class="flex flex-col pt-4 space-y-4">
