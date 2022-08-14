@@ -62,9 +62,6 @@
           <#if realm.internationalizationEnabled && locale.supported?size gt 1>
             <@locales.kw />
           </#if>
-          <@linkSecondary.kw href="${properties.accountManagementUrl}">
-            <span class="text-sm">${msg("accountManagement")} »</span>
-          </@linkSecondary.kw>
         </@nav.kw>
       </@container.kw>
     </body>
