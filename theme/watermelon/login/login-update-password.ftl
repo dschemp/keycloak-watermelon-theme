@@ -15,8 +15,7 @@
         autocomplete="username"
         name="username"
         type="hidden"
-        value="${username}"
-      >
+        value="${username}">
       <input autocomplete="current-password" name="password" type="hidden">
       <div>
         <span>${msg("passwordNew")}</span>
