@@ -18,7 +18,7 @@
       class="m-0 space-y-4"
       method="post">
       <#if otpLogin.userOtpCredentials?size gt 1>
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center justify-around space-x-4 pb-2">
           <#list otpLogin.userOtpCredentials as otpCredential>
             <@radioAccent.kw
               checked=(otpCredential.id == otpLogin.selectedCredentialId)
