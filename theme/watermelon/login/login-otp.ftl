@@ -2,7 +2,7 @@
 <#import "components/button/primary.ftl" as buttonPrimary>
 <#import "components/input/primary.ftl" as inputPrimary>
 <#import "components/label/totp.ftl" as labelTotp>
-<#import "components/link/secondary.ftl" as linkSecondary>
+<#import "components/link/buttonSecondary.ftl" as buttonLinkSecondary>
 <#import "components/radio/accent.ftl" as radioAccent>
 
 <@layout.registrationLayout
@@ -43,12 +43,21 @@
           ${msg("placeholderOTP")}
         </@inputPrimary.kw>
       </div>
-      <div class="pt-4">
-        <@buttonPrimary.kw
-          name="submitAction"
-          type="submit">
-          ${msg("doLogIn")}
-        </@buttonPrimary.kw>
+      <div class="pt-4 space-y-4">
+        <div>
+          <@buttonPrimary.kw
+            name="submitAction"
+            type="submit">
+            ${msg("doLogIn")}
+          </@buttonPrimary.kw>
+        </div>
+        <div>
+          <@buttonLinkSecondary.kw
+            href="${url.loginRestartFlowUrl}"
+            title="${msg('restartLoginTooltip')}">
+            ${msg("restartLoginTooltip")}
+          </@buttonLinkSecondary.kw>
+        </div>
       </div>
     </form>
   </#if>

@@ -11,7 +11,6 @@
 <#import "components/layout/required-fields.ftl" as requiredFields>
 <#import "components/layout/title.ftl" as title>
 <#import "components/layout/subtitle.ftl" as subtitle>
-<#import "components/layout/username.ftl" as username>
 <#import "components/link/secondary.ftl" as linkSecondary>
 
 <#macro
@@ -30,13 +29,9 @@
         <@card.kw>
           <@cardHeader.kw>
             <@title.kw />
-            <#if !(auth?has_content && auth.showUsername() && !auth.showResetCredentials())>
-              <@subtitle.kw>
-                <#nested "header">
-              </@subtitle.kw>
-            <#else>
-              <@username.kw />
-            </#if>
+            <@subtitle.kw>
+              <#nested "header">
+            </@subtitle.kw>
           </@cardHeader.kw>
           <div class="separate"></div>
           <@cardMain.kw>
