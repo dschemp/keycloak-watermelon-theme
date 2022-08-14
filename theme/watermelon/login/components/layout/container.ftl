@@ -1,8 +1,8 @@
 <#import "./page-footer.ftl" as pageFooter>
 
 <#macro kw>
-  <div class="bg-secondary-200 bg-repeat bg-center flex flex-col items-center min-h-screen">
-    <div class="sm:max-w-prose space-y-6 w-full py-0 grow sm:pt-24 pb-8">
+  <div class="bg-secondary-200 flex flex-col items-center justify-center min-h-screen">
+    <div class="sm:max-w-prose space-y-6 w-full grow sm:pt-16 pb-8">
       <#nested>
     </div>
     <div class="w-full p-4 text-center">

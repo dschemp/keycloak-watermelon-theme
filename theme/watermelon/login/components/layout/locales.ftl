@@ -5,7 +5,7 @@
   <div class="relative" x-data="{open: false}">
     <@linkSecondary.kw component="button" type="button" @click="open = true">
       <div class="flex items-center">
-        <span class="mr-1 text-sm">${locale.current}</span>
+        <span class="mr-1">${locale.current}</span>
         <@iconChevronDown.kw />
       </div>
     </@linkSecondary.kw>
@@ -18,7 +18,7 @@
         <#if locale.current != locales.label>
           <div class="px-4 py-2">
             <@linkSecondary.kw href=locales.url>
-              <span class="text-sm">${locales.label}</span>
+              <span>${locales.label}</span>
             </@linkSecondary.kw>
           </div>
         </#if>

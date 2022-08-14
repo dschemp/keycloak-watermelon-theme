@@ -80,7 +80,7 @@
         <div class="separate">${msg("noAccount")}</div>
         <div class="pt-2">
           <@buttonLinkSecondary.kw href=url.registrationUrl>
-            <span class="text-sm">${msg("doRegister")}</span>
+            <span>${msg("doRegister")}</span>
           </@buttonLinkSecondary.kw>
         </div>
       </div>
